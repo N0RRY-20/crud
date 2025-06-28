@@ -1,0 +1,177 @@
+/* Tema dasar dark */
+body.dark-theme {
+  background-color: #1e1e2f;
+  color: #f0f0f0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 22px;
+  color: #ffffff;
+  max-width: 90%;
+  line-height: 1.4;
+}
+
+/* Container Form */
+.form-container {
+  background-color: #2c2c3e;
+  padding: 25px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}
+
+/* Label */
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* Input Unik */
+.form-input {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border: 2px solid #555;
+  border-radius: 8px;
+  background-color: #3a3a4d;
+  color: #fff;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  border-color: #00bcd4;
+  outline: none;
+  box-shadow: 0 0 8px #00bcd4;
+}
+
+/* Tombol Submit */
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #00bcd4;
+  border: none;
+  border-radius: 8px;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #0097a7;
+}
+
+/* Catatan Formulir Glomorphism Style */
+.form-note {
+  background: #2c2c3e;
+  border-radius: 10px;
+  padding: 25px;
+  margin-top: 30px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: inset 2px 2px 6px #1a1a28, inset -2px -2px 6px #3a3a50;
+  color: #f0f0f0;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.form-note h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+  text-align: center;
+  color: #00bcd4;
+}
+
+.note-section {
+  margin-bottom: 20px;
+}
+
+.note-section h3 {
+  font-size: 16px;
+  color: #88e0ff;
+  margin-bottom: 10px;
+}
+
+.note-section ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.note-section ul li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.note-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.note-table th,
+.note-table td {
+  border: 1px solid #444;
+  padding: 8px;
+  text-align: left;
+}
+
+.note-table th {
+  background-color: #3a3a4d;
+  color: #00bcd4;
+}
+
+.note-footer {
+  margin-top: 20px;
+  font-style: italic;
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .form-note {
+    padding: 15px;
+    font-size: 13px;
+  }
+
+  .note-table th,
+  .note-table td {
+    font-size: 13px;
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 18px;
+  }
+
+  .form-container {
+    padding: 20px;
+    box-shadow: none;
+    border-radius: 8px;
+  }
+
+  .form-input,
+  .submit-button {
+    font-size: 15px;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,90 @@
+/* Global body */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden; /* mencegah scroll horizontal */
+}
+
+body {
+  background-color: #1e1e2f;
+  color: #ffffff;
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Judul Halaman */
+h1 {
+  color: #88cfff;
+  text-shadow: 0 0 10px rgba(0, 140, 255, 0.5);
+  margin-bottom: 40px;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+/* Tabel utama */
+.data-table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #2a2a3b;
+  box-shadow: 0 0 20px rgba(0, 128, 255, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Header tabel */
+.header-row {
+  background-color: #1f2a40;
+  box-shadow: 0 0 10px rgba(0, 140, 255, 0.4);
+}
+
+.header-cell {
+  padding: 14px 20px;
+  color: #88cfff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #2f3a55;
+}
+
+/* Baris data */
+.data-row:nth-child(even) {
+  background-color: #35354a;
+}
+
+.data-row:nth-child(odd) {
+  background-color: #2f2f40;
+}
+
+.data-row:hover {
+  background-color: #41415a;
+  transition: background-color 0.2s ease;
+}
+
+/* Sel data */
+.data-cell {
+  padding: 12px 20px;
+  border-bottom: 1px solid #444;
+  color: #e0e0e0;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Di layar kecil, aktifkan scroll horizontal */
+@media (max-width: 480px) {
+  .table-container {
+    border-radius: 8px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .data-table {
+    width: max-content; /* agar tidak dipaksa mengecil */
+    min-width: 400px; /* bisa disesuaikan */
+  }
+}

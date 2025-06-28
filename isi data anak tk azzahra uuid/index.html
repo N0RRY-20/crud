@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pengisian Data Anak TK Azzahra</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="dark-theme">
+    <h1>Formulir Pengisian Data untuk QR Code TK Azzahra</h1>
+    <form class="form-container">
+      <label for="nama" class="form-label">Nama:</label>
+      <input
+        placeholder="Masukkan Nama Lengkap Anak"
+        type="text"
+        id="nama"
+        name="nama"
+        pattern="^[A-Za-zÀ-ÿ\s]{2,50}$"
+        title="Nama hanya boleh huruf dan spasi, 2–50 karakter"
+        class="form-input"
+        required
+      />
+      <br /><br />
+      <label for="kelas" class="form-label">Kelas:</label>
+      <input
+        type="text"
+        id="kelas"
+        name="kelas"
+        placeholder="Masukkan Nama Kelas"
+        pattern="^[A-Za-z0-9\s\-]{2,10}$"
+        class="form-input"
+        required
+      />
+      <br /><br />
+      <button
+        type="submit"
+        id="btnSubmit"
+        name="btnSubmit"
+        class="submit-button"
+      >
+        Submit
+      </button>
+    </form>
+    <a href="../pathlist/index.html">lihat data</a>
+    <div class="form-note">
+      <h2>Catatan Pengisian Formulir</h2>
+
+      <div class="note-section">
+        <h3>👶 Nama Anak</h3>
+        <ul>
+          <li>
+            ✅ Gunakan huruf dan spasi saja. Contoh:
+            <strong>Nadia Salsabila</strong>
+          </li>
+          <li>
+            ❌ Tidak boleh angka atau simbol. Contoh salah: <em>Rani123</em>,
+            <em>!Aisyah@</em>
+          </li>
+          <li>✅ Panjang minimal 2 karakter, maksimal 50 karakter</li>
+          <li>⛔ Hindari singkatan tidak umum. Tulis nama lengkap</li>
+        </ul>
+      </div>
+
+      <div class="note-section">
+        <h3>🏫 Kelas</h3>
+        <ul>
+          <li>
+            ✅ Boleh huruf, angka, spasi, atau tanda hubung. Contoh:
+            <strong>TK-A</strong>, <strong>2 B</strong>
+          </li>
+          <li>❌ Minimal 2 karakter. Contoh salah: <em>A</em>, <em>1</em></li>
+          <li>
+            ⛔ Jangan isi dengan kata bebas seperti: <em>Kelas Dua</em>,
+            <em>Kelompok Bermain</em>
+          </li>
+        </ul>
+      </div>
+
+      <div class="note-section">
+        <h3>💡 Contoh Pengisian:</h3>
+        <table class="note-table">
+          <tr>
+            <th>Nama Anak</th>
+            <th>Kelas</th>
+          </tr>
+          <tr>
+            <td>Rafi Maulana</td>
+            <td>TK-B</td>
+          </tr>
+          <tr>
+            <td>Salsabila Zahra</td>
+            <td>1A</td>
+          </tr>
+          <tr>
+            <td>Ahmad Zidan</td>
+            <td>3 C</td>
+          </tr>
+        </table>
+      </div>
+
+      <p class="note-footer">
+        🙏 Terima kasih ya sudah mau meluangkan waktu untuk berpartisipasi
+        membantu dalam mengisi form.
+      </p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
