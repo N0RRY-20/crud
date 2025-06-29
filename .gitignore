@@ -1,0 +1,46 @@
+# Composer dependencies
+/vendor/
+
+# Node dependencies
+/node_modules/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE files
+*.sublime-workspace
+*.sublime-project
+*.code-workspace
+.vscode/
+.idea/
+
+# Log files
+*.log
+
+# Environment files
+.env
+.env.*
+
+# Cache and build files
+/cache/
+build/
+dist/
+tmp/
+*.tmp
+
+# User uploads
+/storage/
+uploads/
+
+# PHPUnit
+.phpunit.result.cache
+
+# Misc
+*.bak
+*.swp
+*.swo
+*.orig
+
+# other
+test/

@@ -16,11 +16,38 @@
             <th class="header-cell">ID</th>
             <th class="header-cell">Nama</th>
             <th class="header-cell">Kelas</th>
+            <th class="header-cell">Aksi</th>
+            <th class="header-cell">Barcode</th>
           </tr>
         </thead>
         <tbody id="tbody"></tbody>
       </table>
     </div>
+    <div id="editModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Edit Data</h2>
+        <form id="editForm">
+          <input type="hidden" id="edit-id" />
+          <input
+            type="text"
+            id="edit-nama"
+            placeholder="Nama"
+            name="edit-nama"
+            required
+          />
+          <input
+            type="text"
+            id="edit-kelas"
+            placeholder="Kelas"
+            name="edit-kelas"
+            required
+          />
+          <button type="submit" id="edit">Simpan</button>
+        </form>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
