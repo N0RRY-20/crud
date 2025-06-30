@@ -8,6 +8,7 @@ const editKelas = document.getElementById("edit-kelas");
 const editForm = document.getElementById("editForm");
 const editId = document.getElementById("edit-id");
 
+// menampilkan semua data
 const viewData = async () => {
   const res = await fetch("http://localhost/projectTkAzzhara/pathlist/");
   const result = await res.json();
@@ -24,7 +25,7 @@ const viewData = async () => {
       <td class="data-cell kelas">${data.kelas}</td>
       <td class="data-cell">
         <button onclick='editData(${JSON.stringify(data.id)})'>Edit</button>
-        <button >Delete</button>
+        <button onclick='deleteData(${JSON.stringify(data.id)})'>Delete</button>
       </td>
       <td><button>Download</button></td>
     `;
@@ -46,6 +47,23 @@ closeBtn.onclick = () => {
 window.onclick = (e) => {
   if (e.target == editModal) {
     editModal.style.display = "none";
+  }
+};
+
+// delete data
+const deleteData = async (dataId) => {
+  try {
+    const res = await fetch(`http://localhost/projectTkAzzhara/pathlist/`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ id: dataId }),
+    });
+    tbody.innerHTML = "";
+    viewData();
+  } catch (err) {
+    console.log(err);
   }
 };
 
