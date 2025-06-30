@@ -27,10 +27,20 @@ const viewData = async () => {
         <button onclick='editData(${JSON.stringify(data.id)})'>Edit</button>
         <button onclick='deleteData(${JSON.stringify(data.id)})'>Delete</button>
       </td>
-      <td><button>Download</button></td>
+      <td class="data-cell"><canvas id="qr-${
+        data.id
+      }" width="100" height="100" style="display:none;"></canvas>
+      <button onclick="downloadQR('qr-${data.id}', '${
+      data.nama
+    }')">Download</button></td>
     `;
 
     tbody.appendChild(tr);
+    new QRious({
+      element: document.getElementById(`qr-${data.id}`),
+      value: data.id,
+      size: 100,
+    });
   });
 };
 viewData();
@@ -92,3 +102,11 @@ editForm.addEventListener("submit", async (e) => {
     console.log(err);
   }
 });
+
+function downloadQR(canvasId, nama) {
+  const canvas = document.getElementById(canvasId);
+  const link = document.createElement("a");
+  link.download = `qr-${nama}.png`;
+  link.href = canvas.toDataURL("image/png");
+  link.click();
+}
