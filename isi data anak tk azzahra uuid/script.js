@@ -1,9 +1,17 @@
 const nama = document.getElementById("nama");
 const kelas = document.getElementById("kelas");
-const btnSubmit = document.getElementById("btnSubmit");
+const form = document.querySelector("form"); // ambil form langsung
 
-const submit = async (e) => {
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
+
+  // Cek validasi input sebelum kirim
+  if (!nama.checkValidity() || !kelas.checkValidity()) {
+    // Ini akan memicu browser menampilkan pesan validasi default
+    form.reportValidity();
+    return;
+  }
+
   const data = {
     nama: nama.value,
     kelas: kelas.value,
@@ -23,20 +31,16 @@ const submit = async (e) => {
 
     if (res.ok) {
       const result = await res.json();
-      // Handle success (e.g., show a success message)
       nama.value = "";
       kelas.value = "";
-      alert("data berhasil dikirim");
+      alert("Data berhasil dikirim");
       console.log("Success:", result);
     } else {
-      // Handle error response
       console.error("Error:", res.statusText);
-      alert("data gagal dikirim");
+      alert("Data gagal dikirim");
     }
   } catch (error) {
-    // Handle network or other errors
     console.error("Fetch error:", error);
+    alert("Terjadi kesalahan jaringan");
   }
-};
-
-btnSubmit.addEventListener("click", submit);
+});

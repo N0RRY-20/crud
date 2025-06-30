@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Data Siswa</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
   </head>
   <body>
     <h1>Data Anak</h1>
+    <div style="margin-bottom: 25px">
+      <a href="../isi data anak tk azzahra uuid/index.html">isi data</a>
+    </div>
     <div class="table-container">
       <table class="data-table">
         <thead>
@@ -24,17 +26,19 @@
         <tbody id="tbody"></tbody>
       </table>
     </div>
+
     <div id="editModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Edit Data</h2>
-        <form id="editForm">
+      <div class="modal-content modal-edit">
+        <span class="close modal-close">&times;</span>
+        <h2 class="modal-title">Edit Data</h2>
+        <form id="editForm" class="modal-form">
           <input type="hidden" id="edit-id" />
           <input
             type="text"
             id="edit-nama"
             placeholder="Nama"
             name="edit-nama"
+            class="modal-input"
             required
           />
           <input
@@ -42,14 +46,13 @@
             id="edit-kelas"
             placeholder="Kelas"
             name="edit-kelas"
+            class="modal-input"
             required
           />
-          <button type="submit" id="edit">Simpan</button>
+          <button type="submit" id="edit" class="modal-button">Simpan</button>
         </form>
       </div>
     </div>
-
-    <div id="qrcode"></div>
 
     <script src="script.js"></script>
   </body>
